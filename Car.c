@@ -35,7 +35,7 @@ void postcar(car car1)
 
 //*************************************************************//
 
-void searchCar(car*car1)
+void searchCar(car car1)
 {
     char ch[50];
     char ch1[50];
@@ -68,4 +68,6 @@ void searchCar(car*car1)
             }
 
         }
+    }
+}
 
