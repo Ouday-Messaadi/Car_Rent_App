@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1703080534 source:c:\users\asus gam\desktop\c progs\car_rent\account.c
+
+1703080577 source:c:\users\asus gam\desktop\c progs\car_rent\car.c
+
+1703082239 source:c:\users\asus gam\desktop\c progs\car_rent\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1703083834 source:c:\users\asus gam\desktop\c progs\car_rent\date.c
+	"Date.h"
+	<stdio.h>
+	<time.h>
+
+1703083834 c:\users\asus gam\desktop\c progs\car_rent\date.h
+
