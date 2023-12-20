@@ -8,11 +8,11 @@ void AddCar (car* car1,Account* acc)
     car1->accountOwner = malloc(sizeof(Account));
     car1->accountClient = malloc(sizeof(Account));
     printf("Please, enter the car model :");
-    gets(car1.CarModel);
+    gets(car1->CarModel);
     printf("Enter the color of the car :");
-    gets(car1.CarColor);
+    gets(car1->CarColor);
     printf("Enter the price of the car per hour :");
-    scanf("%f",car1.CarPriceRentPerHour);
+    scanf("%f",car1->CarPriceRentPerHour);
     car1->accountOwner=acc ;
     car1->accountClient=NULL;
 }
