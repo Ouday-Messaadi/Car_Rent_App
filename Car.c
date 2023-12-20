@@ -35,39 +35,22 @@ void postcar(car car1)
 
 //*************************************************************//
 
-void searchCar(car car1)
+void rentCar(car*car1, Account* acc)
 {
     char ch[50];
-    char ch1[50];
-    float price ;
-    printf("Enter the car's color you want : ");
-    gets(ch);
-    if ((strcmp(ch,car1.CarColor)!=0))
-    {
-        printf("The car's color is not available, Please choose another color");
-        gets(ch);
-    }
 
-    else
-    {
-        printf("Enter the car's model you want :");
+     printf("\nEnter the car's model you want :\n");
         gets(ch1);
-        if (strcmp(ch1,car1.CarModel)!=0)
+        if (strcmp(ch1,car1.CarModel)==0)
         {
-            printf("The car's model is not available, Please choose another model");
+            printf("\nThe car's model is not available, Please choose another model \n");
             gets(ch1);
-        }
-        else
-        {
-            printf("Enter the car's price you want per hour :");
-            scanf("%f",price);
-            if (price!=car1.CarPriceRentPerHour)
-            {
-                printf("This car's price is not available, Please try another price");
-                scanf("%f",price);
-            }
+            printf(" \nPlease enter your contact information \n");
+             Entry_Account (acc);
 
         }
-    }
+        else printf("\nThe car's model is not available, Please choose another model\n");
+
+
+
 }
-
