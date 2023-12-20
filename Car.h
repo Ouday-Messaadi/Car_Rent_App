@@ -8,5 +8,6 @@ typedef struct
     float CarPriceRentPerHour ;
     Account* account ;
 } car;
-
+void AddCar (car*,Account*);
+void postcar(car*,Account*);
 #endif // CAR_H_INCLUDED
