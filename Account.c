@@ -1,5 +1,6 @@
 #include "Account.h"
 #include <string.h>
+#include <stdio.h>
 
 void Entry_Account (Account * acc )
 {
@@ -27,4 +28,32 @@ void Post_Account (Account acc)
     printf("\nIdentity card :",acc.Id);
     printf("\nBirth date :");
     Post_Date(*acc.Birthdate);
+}
+
+void Save_Account( Account acc)
+{
+    FILE * ficAcc ;
+    ficAcc = fopen("Account.txt","a");
+    fprintf(ficAcc,"\n%s%s",acc.FirstName,acc.password);
+    fclose(ficAcc);
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+int Verifie_Account(char * FirstName ,char * Password)
+{
+    char CompareCoor[40];
+    strcat(CompareCoor,FirstName);
+    strcat(CompareCoor,Password);
+    char CompareFile[40];
+    FILE * ficAcc ;
+    ficAcc = fopen("Account.txt","r");
+    while ( fscanf(ficAcc,"%s",CompareFile) == 1)
+    {
+    if (strcmp(CompareFile,CompareCoor)==0)
+        return 1 ;
+    }
+    fclose(ficAcc);
+    return 0 ;
 }
