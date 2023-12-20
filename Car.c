@@ -20,10 +20,12 @@ void AddCar (car* car1,Account* acc)
 
 void postcar(car car1)
 {   
-    printf("The car's color is  : %s ",car1.CarColor);
-    printf("The car's model is  : %s ",car1.CarModel);
-    printf("The car's price per hour is : %f ",car1.CarPriceRentPerHour);
+    printf("\nThe car's color is  : %s  \n",car1.CarColor);
+    printf("\nThe car's model is  : %s  \n",car1.CarModel);
+    printf("\nThe car's price per hour is : %f  \n",car1.CarPriceRentPerHour);
+    printf("The car ouner is : "\n);
     Post_Account (car1.accountOwner);
+    printf("The car client is : "\n);
     Post_Account (car1.accountClient);
 
 }
