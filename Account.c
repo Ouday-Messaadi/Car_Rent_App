@@ -29,7 +29,7 @@ void Post_Account (Account acc)
     printf("\nBirth date :");
     Post_Date(*acc.Birthdate);
 }
-
+/*------------------------------------------------------------------------------------------------*/
 void Save_Account( Account acc)
 {
     FILE * ficAcc ;
