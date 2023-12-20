@@ -40,11 +40,11 @@ void rentCar(car*car1, Account* acc)
     char ch[50];
 
      printf("\nEnter the car's model you want :\n");
-        gets(ch1);
-        if (strcmp(ch1,car1.CarModel)==0)
+        gets(ch);
+        if (strcmp(ch,car1.CarModel)==0)
         {
             printf("\nThe car's model is not available, Please choose another model \n");
-            gets(ch1);
+            gets(ch);
             printf(" \nPlease enter your contact information \n");
              Entry_Account (acc);
 
