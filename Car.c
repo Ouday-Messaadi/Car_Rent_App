@@ -43,11 +43,7 @@ void rentCar(car*car1, Account* acc)
         gets(ch);
         if (strcmp(ch,car1.CarModel)==0)
         {
-            printf("\nThe car's model is not available, Please choose another model \n");
-            gets(ch);
-            printf(" \nPlease enter your contact information \n");
-             Entry_Account (acc);
-
+            car1.accountClient=acc  ;
         }
         else printf("\nThe car's model is not available, Please choose another model\n");
 
