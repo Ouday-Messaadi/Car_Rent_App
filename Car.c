@@ -23,11 +23,13 @@ void postcar(car car1)
     printf("\nThe car's color is  : %s  \n",car1.CarColor);
     printf("\nThe car's model is  : %s  \n",car1.CarModel);
     printf("\nThe car's price per hour is : %f  \n",car1.CarPriceRentPerHour);
-    printf("The car ouner is : "\n);
-    Post_Account (car1.accountOwner);
+    printf("The car owner is : "\n);
+    Post_Account (*car1.accountOwner);
+    if (car1.accountClient != NULL)
+    {
     printf("The car client is : "\n);
-    Post_Account (car1.accountClient);
-
+    Post_Account (*car1.accountClient);
+    }
 }
 
 
