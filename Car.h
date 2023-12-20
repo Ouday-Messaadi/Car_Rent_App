@@ -13,6 +13,6 @@ typedef struct
 
 void AddCar (car*,Account*);
 void postcar(car) ;
-void searchCar(car);
+void rentCar(car*, Account*);
 
 #endif // CAR_H_INCLUDED
