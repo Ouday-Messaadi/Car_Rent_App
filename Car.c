@@ -16,8 +16,9 @@ void AddCar (car* car1,Account* acc)
 }
 //*************************************************************//
 
-void postcar(car*car1,Account acc)
-{
+void postcar(car car1)
+{   
+    Account acc;
     printf("The car's color is  : %s ",car1.CarColor);
     printf("The car's model is  : %s ",car1.CarModel);
     printf("The car's price per hour is : %f ",car1.CarPriceRentPerHour);
