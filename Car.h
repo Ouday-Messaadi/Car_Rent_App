@@ -12,6 +12,6 @@ typedef struct
 
 
 void AddCar (car*,Account*);
-void postcar(car*,Account);
+void postcar(car ) ;
 void searchCar(car*);
 #endif // CAR_H_INCLUDED
