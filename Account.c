@@ -14,7 +14,7 @@ void Entry_Account (Account * acc )
     scanf("%s",acc->password);
     }while( strlen( acc->password)< 4 );
     printf("\nIdentity card :");
-    scanf("%d",acc->Id);
+    scanf("%d",&acc->Id);
     printf("\nBirth date :");
     Entry_Date(acc->Birthdate);
 }
@@ -34,17 +34,19 @@ void Save_Account( Account acc)
 {
     FILE * ficAcc ;
     ficAcc = fopen("Account.txt","a");
-    fprintf(ficAcc,"\n%s%s",acc.FirstName,acc.password);
+    fprintf(ficAcc,"\n%d%s",acc.Id,acc.password);
     fclose(ficAcc);
 }
 
 /*------------------------------------------------------------------------------------------------*/
 
 
-int Verifie_Account(char * FirstName ,char * Password)
+int Verifie_Account(int IdentityCard ,char * Password)
 {
     char CompareCoor[40];
-    strcat(CompareCoor,FirstName);
+    char id[20];
+    sprintf(id,"%d",IdentityCard);
+    strcat(CompareCoor,id);
     strcat(CompareCoor,Password);
     char CompareFile[40];
     FILE * ficAcc ;

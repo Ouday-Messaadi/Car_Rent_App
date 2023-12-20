@@ -15,7 +15,6 @@ typedef struct
 void Entry_Account (Account * );
 void Post_Account ( Account);
 void Save_Account( Account );
-int Verifie_Account(char * ,char *);
+int Verifie_Account(int ,char *);
 
 #endif // ACCOUNT_H_INCLUDED
-
