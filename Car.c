@@ -5,6 +5,8 @@
 
 void AddCar (car* car1,Account* acc)
 {
+    car1->accountOwner = malloc(sizeof(Account));
+    car1->accountClient = malloc(sizeof(Account));
     printf("Please, enter the car model :");
     gets(car1.CarModel);
     printf("Enter the color of the car :");
@@ -18,11 +20,11 @@ void AddCar (car* car1,Account* acc)
 
 void postcar(car car1)
 {   
-    Account acc;
     printf("The car's color is  : %s ",car1.CarColor);
     printf("The car's model is  : %s ",car1.CarModel);
     printf("The car's price per hour is : %f ",car1.CarPriceRentPerHour);
-    Post_Account (acc);
+    Post_Account (car1.accountOwner);
+    Post_Account (car1.accountClient);
 
 }
 
